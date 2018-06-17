@@ -1,0 +1,33 @@
+mixin header()
+	//block header
+	//.main-section(style="background-image:url('img/item-1.jpg')")
+	.main-section
+		.main-section-filter
+		.header
+			.header-layer
+				.main-cont
+					.header-wrap
+						a(href="#").header-logo Logo
+							img(src="img/logo-main.svg", alt="")
+						.header-nav
+							.header-nav__el
+								.header-nav__el-link-wrap
+									a(rel="m_PageScroll2id" href="#about").header-nav__el-link О продукте
+							.header-nav__el
+								.header-nav__el-link-wrap
+									a(rel="m_PageScroll2id" href="#advant").header-nav__el-link Преимущества
+							.header-nav__el
+								.header-nav__el-link-wrap
+									a(rel="m_PageScroll2id" href="#tarif").header-nav__el-link Тарифы
+						.menu-toggle
+							+icon("menu","icon-el")
+
+		.main-section-cont
+			.main-cont
+				.main-section-title Платформа автоматизации процессов
+				.main-section-title--sub Первая в России интеллектуальная платформа автоматизации процессов административно-хозяйственной деятельности
+				.header-get-row
+					.header-get--light Подробнее
+
+					.header-get--mark.modal-get(data-modal="order") Заказать
+	//block header end

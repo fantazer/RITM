@@ -1,0 +1,175 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.section.section-banner#about
+	.main-cont
+		.banner
+			.banner-img
+				img(src="img/monitor.jpg", alt="")
+			.banner-cont
+				.banner-title Reference IT-Model
+				.banner-text Платформа автоматизации административно-хозяйственной деятельности в соответствии с требованиями Профессионального стандарта, разработанного Ассоциацией "Объединение административно-хозяйственных профессионалов" и утвержденного Министерством труда и социальной защиты Российской Федерации
+.section.section-service
+	.main-cont
+		.section-title Мы предлагаем
+		.service
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text сбор и анализ потребностей
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text оценка удовлетворенности сотрудников административно-хозяйственной деятельностью
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text проведение согласования заявок по заданному алгоритму
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text предоставление оперативной информации о ходе работ и формирование аналитической отчетности в различных разрезах
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text автоматизация бизнес-процесса любого уровня сложности
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text эффективные интерфейсы со смежными подразделениями и службами
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text контроль выполнения работ (напоминания и эскалация)
+			.service__el
+				.service__el-icon
+					+icon("checked","icon")
+				.service__el-text интеграция с другими системами автоматизации компании (бухгалтерского и складского учета,  системами HR, системами учета активов и т.д.)
+
+.section.section--gray.section-advant#advant
+	.main-cont
+		.section-title Наши преимущества
+		.advant
+			.advant__el
+				.advant__el-icon
+					+icon("medal","icon")
+				.advant__el-text Полное соответствие Профессиональному стандарту специалистов административно-хозяйственной деятельности
+			.advant__el
+				.advant__el-icon
+					+icon("star","icon")
+				.advant__el-text Платформа построена исключительно на российских компонентах, создается и поддерживается российской командой разработчиков
+			.advant__el
+				.advant__el-icon
+					+icon("target","icon")
+				.advant__el-text Клиенториентированный, интуитивно понятный интерфейс
+
+.section.section-implement
+	.main-cont
+		.section-title Быстрое внедрение
+		.implement
+			.implement__el
+				.implement__el-icon 1
+				.implement__el-text Готовая конфигурация, обеспечивающая автоматизацию основных процессов административно-хозяйственной деятельности организации
+			.implement__el
+				.implement__el-icon 2
+				.implement__el-text Быстрый старт (один день на установку и первичную настройку)
+			.implement__el
+				.implement__el-icon 3
+				.implement__el-text Детальная настройка под специфику Заказчика осуществляется без дополнительной доработки платформы (для настройки не требуется привлечение специалистов)
+
+.section.section--gray.section-dirrection
+	.main-cont
+		.dirrection
+			.dirrection__title Направления автоматизации
+			.dirrection__content
+				.dirrection__row
+					.dirrection__icon
+						+icon("checked","icon")
+					.dirrection__text Административное, хозяйственное, документационное и операционное обеспечение
+				.dirrection__row
+					.dirrection__icon
+						+icon("checked","icon")
+					.dirrection__text Поддержка и сопровождение работы всех служб и работников организации
+
+.section.section-implement#tarif
+	.main-cont
+		.section-title Тарифы
+		.tarif
+			- for (var i=0;i<3;i++)
+				.tarif__el
+					.tarif__title Название тарифа #{i}
+					.tarif__text Описание тарифа, описание тарифа, описание тарифа
+					.tarif__price-el
+						.tarif__price-text Стоимость внедрения
+						.tarif__price-val 300 000 р
+					.tarif__price-el
+						.tarif__price-text Стоимость поддержки
+						.tarif__price-val 300 000 р/год
+					.tarif__get.modal-get(data-modal="order") выбрать
+
+.footer
+	.main-cont
+		.footer-wrap
+			.footer__col
+				.footer__col-title Ссылки на скачивание
+				a(href="#").footer__link Дистрибутив ПС
+				a(href="#").footer__link Инструкция по скачиванию и установке ПС
+			.footer__col
+				.footer__col-title Документация к проекту
+				a(href="#").footer__link Руководство администратора
+				a(href="#").footer__link Руководство пользователя
+				a(href="#").footer__link Общее описание системы
+			.footer__col
+				.footer__col-title Мы на связи!
+				.contact-row
+					.contact-row-icon
+						+icon("phone","icon")
+					.contact-row-text +7 (495) 981-57-10
+				.contact-row
+					.contact-row-icon
+						+icon("mail","icon")
+					.contact-row-text info@itexpert.ru
+				.contact-row
+					.contact-row-icon
+						+icon("world","icon")
+					.contact-row-text www.itexpert.ru
+			.footer__col
+				.footer__col-title Наш адрес
+				.contact-row
+					.contact-row-icon
+						+icon("location","icon")
+					.contact-row-text г. Москва, ул. Каланчевская 15, офис 402
+.modal-layer
+	.modal-cont
+		.modal-filter
+		.modal-wrap
+			.modal(data-modal="order")
+				.modal-content.modal-content--fogot
+					.modal-close
+						+icon("close","icon")
+					.modal-title Оставьте заявку
+					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
+					form.validate-form( action="javascript:void(null);")
+						.input-row
+							input(type="text" name="name" placeholder="Ваше имя").input
+						.input-row
+							input(type="text" name="phone" placeholder="Ваш телефон").input
+						.input-row
+							textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
+						.agree-row
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox" name="agree").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+									.sytle-input-text=text
+							.agree-row__text Согласен с
+								a(href="#") условиями обработки персональных данных
+						input(type="submit" value="Отправить заявку").modal-send
+
+			.modal(data-modal="truemessage")
+				.modal-content.modal-content--true
+					+icon("interface","icon")
+					.modal-text-true Ваша заявка принята
+include ./block_html/_script.pug

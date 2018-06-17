@@ -1,0 +1,614 @@
+@import 'rupture'
+@import "variable/_function.styl"
+@import "variable/_fonts.styl"
+@import "variable/_ie.styl"
+@import "icon/sprite.css"
+@import "variable/_helper.styl"
+@import "variable/_default.styl"
+@import "variable/_elements.styl"
+@import "variable/_constant.styl"
+@import "../module/**/*"
+
+body
+	@extend .type--main
+	font-family $v-font
+	color $main-text-color
+	line-height 1.2
+	letter-spacing 0.01em
+
+.main-cont
+	center(1200px,10px)
+
+.main-section-filter
+	position: absolute
+	top: 0
+	left: 0
+	background-color rgba(0, 0, 0, 0.6)
+	width: 100%
+	height: 100%
+
+.header-logo
+	up()
+	font-size: 20px
+	color white
+	text-align: left
+
+.header-phone
+	up()
+	font-size: 20px
+	a
+		color white
+
+.main-section-title--sub
+	color white
+	width: 50%
+	line-height: 1.6
+	//color #494E62
+.main-section
+	width: 100%
+	height: 100vh
+	//background: rgba(0, 0, 0, 0.5)
+	position: relative
+	flex(mid)
+	background-attachment fixed
+	background-repeat: no-repeat
+	bg-full()
+
+.main-section-cont
+	position: relative
+
+.main-section-title
+	//color #494E62
+	margin-top: 8%
+	color white
+	font-size: 80px
+	font-weight:bold
+	up()
+	margin-bottom: 20px
+	font-family: 'Ubuntu', sans-serif;
+.header
+	//background-color rgba(0, 0, 0, 0.1)
+	position: fixed
+	top 0
+	left: 0
+	width: 100%
+	z-index 50
+
+.header-logo
+	+below(1024px)
+		width: 100px
+	height: 40px
+	width: 15%
+	flex(mid)
+	img
+		width: 100%
+
+.header-wrap
+	flex(between)
+
+.header-nav__el-link-wrap
+	+below(1024px)
+		border-bottom:1px solid rgba(236, 236, 236, 0.09)
+	flex(between)
+
+.menu-toggle
+	+above(1024px)
+		display: none
+	.icon-el
+		cp()
+		size 20px
+		fill white
+
+.header-nav__el
+	+below(1200px)
+		font-size: 12px
+	+below(1024px)
+		width: 100%
+		text-align: center
+		background: grey
+		font-size: 14px
+	font-size: 14px
+	position: relative
+	.icon-el
+		size 10px
+		fill white
+		margin-left: 5px
+		tr(all)
+	&:hover
+		&>.header-nav__sub
+			opacity 1
+			visibility visible
+		.header-nav__sub
+			transform translateY(0px)
+		.icon-el
+			+above(1024px)
+				transform rotate(-180deg)
+
+.header-nav__el-link
+	+below(1024px)
+		width: 100%
+		flex(between)
+		padding: 20px 10px
+	display: inline-block
+	color: #fefefe
+	//background: #e13f3f
+	border-radius: 20px
+	padding: 10px 20px
+	tr(all)
+	&:hover
+		color white!important
+		background: darken(#e13f3f,10)
+.header-nav__el-icon
+	+below(1024px)
+		cp()
+		flex(mid)
+		background: darken(grey,20)
+		size: 60px
+		.icon-el
+			size 15px
+.header-layer
+	padding: 20px 0
+.header-nav
+	+below(1024px)
+		position: absolute
+		top: 100%
+		width: 100%
+		left: 0
+		fw()
+		display: none
+	+above(1024px)
+		display: flex !important
+	width: 35%
+	justify-content:space-around
+	max-width 440px
+.header-nav__sub
+	+below(1024px)
+		transform translateY(0px)
+		position: initial
+		width: 100%
+		top: initital
+		left: initial
+		margin-left: 0px
+		border-radius 0px
+		opacity 1!important
+		visibility visible!important
+		transition initial
+		.window-coner-top
+			display: none
+	tr(all)
+	transform translateY(20px)
+	position: absolute
+	width: 180px
+	top: 100%
+	left: 50%
+	margin-left: -90px
+	border-radius 4px
+	border 1px solid #dddddd
+	background-color #ffffff
+	opacity 0
+	visibility hidden
+
+.header-nav__sub-wrap
+	position: relative
+	background: white
+
+.header-nav__sub--hidden
+	opacity 0
+	visibility hidden
+	height: 0
+
+.header-nav__sub-el
+	+below(1024px)
+		padding: 10px 0
+	tr(all)
+	padding: 20px
+	display: block
+	border-bottom:1px solid #f7f6f6
+	z-index 5
+	position: relative
+	&:hover
+		background: #f0f0f0
+	&:last-child
+		border-bottom: 0
+
+.section-banner
+	background-color #ebebeb
+
+.section
+	padding: 100px 0
+
+.banner
+	flex(between)
+
+.banner-img
+	width: 45%
+.banner-cont
+	width: 45%
+
+.banner-title
+	font-size: 54px
+	margin-bottom: 20px
+	font-weight: 600
+	font-family: 'Ubuntu', sans-serif;
+	color #494e62
+.banner-text
+	font-size 16px
+	line-height: 1.6
+
+.section-service
+	.main-cont
+		center(1024px,10px)
+//.service
+.section-title
+	text-align: center
+	font-size: 34px
+	font-weight: bold
+	color #494e62
+	margin-bottom: 80px
+	font-family: 'Ubuntu', sans-serif;
+.service
+	f()
+	fw()
+.service__el
+	width calc(50% - 10px)
+	f()
+	margin-bottom: 40px
+.service__el-icon
+	width:40px
+	margin-right: 30px
+	.icon
+		size 25px
+		fill $red
+.service__el-text
+	width: calc(100 - 60px)
+	line-height: 1.6
+
+.advant
+	f()
+	justify-content: space-between
+	fw()
+	align-items: flex-start
+.advant__el
+	width 28%
+	flex(mid)
+	fl()
+	margin-bottom: 40px
+.advant__el-icon
+	margin-bottom: 30px
+	.icon
+		size 120px
+		fill $red
+.advant__el-text
+	text-align: center
+	line-height: 1.6
+
+.section--gray
+	background: #f4f4f4
+
+.implement
+	center(640px,0)
+.implement__el
+	margin-bottom: 30px
+	f()
+.implement__el-icon
+	size 50px
+	round()
+	flex(mid)
+	font-size: 30px
+	border 2px solid $red
+	color $red
+	margin-right: 30px
+.implement__el-text
+	width: calc(100% - 80px)
+	line-height: 1.6
+
+.dirrection
+	flex(between)
+	max-width 1024px
+	margin-left: auto
+	margin-right: auto
+.dirrection__title
+	font-weight:bold
+	font-size: 38px
+	width: 40%
+	line-height: 1.6
+
+.dirrection__content
+	width: 45%
+.dirrection__row
+	f()
+	margin-bottom: 40px
+	&:last-child
+		margin-bottom: 0
+.dirrection__icon
+	width:40px
+	margin-right: 30px
+	.icon
+		size 25px
+		fill $red
+.dirrection__text
+	width: calc(100 - 60px)
+	line-height: 1.6
+
+.tarif
+	flex(between)
+.tarif__el
+	width: 30%
+	padding: 50px 40px 60px 40px
+	flex(mid)
+	fl()
+	border 1px solid $border-color
+.tarif__title
+	font-weight:bold
+	margin-bottom: 30px
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 24px
+.tarif__text
+	text-align: center
+	line-height: 1.6
+	margin-bottom: 30px
+.tarif__price-el
+	margin-bottom: 30px
+	text-align: center
+.tarif__price-text
+	margin-bottom: 10px
+	text-align: center
+	line-height: 1.6
+.tarif__price-val
+	font-weight:bold
+	font-size: 20px
+	color black
+
+.tarif__get
+	@extend .btn--mark
+	@extend .btn--md
+
+.footer
+	padding: 40px 0
+	background: #ececec
+.footer-wrap
+	f()
+	justify-content: space-between
+	align-items: flex-start
+.footer__col
+	width: 23%
+
+.footer__col-title
+	font-weight: bold
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 20px
+
+.contact-row
+	margin-bottom: 15px
+	font-size: 14px
+	f()
+.footer__link
+	margin-bottom: 15px
+	font-size: 14px
+	display: inline-block
+.contact-row-icon
+	margin-right: 10px
+	.icon
+		size 18px
+		fill $red
+
+.header-get-row
+	f()
+	margin-top: 30px
+.header-get--light
+	@extend .btn--md
+	@extend .btn--light
+	margin-right: 25px
+	padding: 15px 45px
+	border-radius: 20px
+.header-get--mark
+	padding: 15px 45px
+	@extend .btn--md
+	@extend .btn--mark
+	border-radius: 20px
+
+//modal + validate
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	width: 100%
+	height: 100%
+	position: relative
+	max-height 100%
+	overflow: auto
+
+.modal-filter
+	+below(640px)
+		background: white
+	position: absolute
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.6)
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal
+	+below(768px)
+		width: 100%
+		box-shadow 0 0 0
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
+	transform translate(-50%,-350%)
+	position: absolute
+	top 50%
+	left 50%
+	opacity .1
+	transition transform .8s, opacity 1s
+	max-width 550px
+
+.modal-content
+	+below(768px)
+		padding: 20px
+	+below(640px)
+		max-height calc(100vh - 60px)
+		overflow-y scroll
+		padding: 20px 5px
+		width: 100%!important
+	//background: #2b8850
+	background: white
+	position: relative
+	padding: 40px
+	+below(768px)
+		width: 80%
+
+.modal-content--register
+	width: 500px
+	input
+		width: 100%
+		margin-bottom: 20px
+
+.modal__show
+	+below(768px)
+		flex(mid)
+	opacity 1
+	transform translate(-50%,-50%)
+
+.modal-close
+	+below(768px)
+		top 15px
+		right 15px
+	position: absolute
+	top: 20px
+	right: 20px
+	cp()
+	.icon
+		+below(768px)
+			size 15px
+		size 20px
+
+.modal-open
+	overflow: hidden
+	overflow-x: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-wrap
+	position: relative
+	height: 100%
+
+.modal-title
+	+below(768px)
+		font-size: 20px
+	@extend .type--lg
+	margin-bottom: 0px
+	text-align: center
+	//color white
+	color black
+	font-size: 32px
+
+.modal-text
+	+below(768px)
+		width: 100%
+		font-size: 12px
+	text-align: center
+	margin: 20px auto 40px auto
+	//width: 80%
+	font-size: 16px
+	line-height: 1.2
+	color #5f5f5f
+
+.validate-form
+	input,textarea
+		width: 100%
+		margin-bottom: 20px
+
+.modal-send
+	@extend .btn--md
+	@extend .btn--mark
+	border 0
+	width: 100%
+	font-weight: 600
+	padding: 15px
+	font-size: 16px
+
+.agree-row
+	f()
+	align-items: center
+	margin:10px 0 20px 0
+	a
+		text-decoration: underline
+		display: inline-block
+
+.agree-row__text
+	width: 100%
+	color black
+	font-size: 12px
+	a
+		color #9c9a9a
+		text-decoration: none
+.field-error
+	.error
+		display: none!important
+
+.field-error
+	input
+		border 1px solid #dc3d3d
+.style-label--checkbox.field-error
+	.sytle-input-element
+		border 1px solid #dc3d3d
+
+.modal-content--true
+	flex(mid)
+	fl()
+	br(10px)
+	.icon
+		fill green
+		size 120px
+		margin-bottom: 20px
+.modal-text-true
+	text-align: center
+	font-weight: bold
+
+//Добавялем стили для этого элемента
+@-webkit-keyframes slideInDown {
+	from {
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+
+.shrink
+	top 0
+	left 0
+	background white
+	width 100%
+	margin 0
+	animation:  slideInDown  1s 1 ease-in-out;
+	border-bottom: 1px solid #ebebeb;
+	.header-layer
+		padding: 5px 0
+	.header-nav__el-link
+		color black
+	.header-logo
+		color black
+
+//modal + validate
